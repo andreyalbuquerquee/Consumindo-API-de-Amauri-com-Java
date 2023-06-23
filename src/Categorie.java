@@ -1,20 +1,9 @@
 import java.io.IOException;
-import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.DoubleSummaryStatistics;
 import java.util.List;
-import java.util.Map;
-import java.util.Scanner;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
-import java.time.format.DateTimeFormatter;
-import org.w3c.dom.Text;
-import java. text.Format;
 import java.lang.reflect.Type;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.Gson;
@@ -65,7 +54,7 @@ public class Categorie {
 
     public void createCategorie(String name) {
         Categorie categorie = new Categorie();
-        categorie.setId(name);
+        categorie.setName(name);
 
         Gson gson = new GsonBuilder()
         .registerTypeAdapter(Categorie.class, new CategoryAdapter())

@@ -1,14 +1,11 @@
 import java.util.Scanner;
-import javax.print.DocFlavor.STRING;
 
 public class App {
     public static void main(String[] args) throws Exception {
         Scanner in = new Scanner(System.in);
         Contact contact = new Contact();
         Categorie categorie = new Categorie();
-        
         int option;
-
 
         do {
             System.out.println("\n****\nMENU\n****\n");
@@ -133,6 +130,9 @@ public class App {
                             System.out.println("Atualização de contato cancelada!\n");
                             break;
 
+                            case 0:
+                            break;
+
                             default:
                             System.out.println("Opção inválida!\n");
                             break;
@@ -182,7 +182,7 @@ public class App {
                     case 2:
                     System.out.println("Informe o id da categoria: \n");
                     String id = in.nextLine();
-                    categorie.findCategorie(id);
+                    System.out.println(categorie.findCategorie(id)); 
                     break;
 
                     case 3:
@@ -222,6 +222,7 @@ public class App {
 
                 case 0:
                 System.out.println("Finalizando o programa...");
+                in.close();
                 break;
 
                 default:
